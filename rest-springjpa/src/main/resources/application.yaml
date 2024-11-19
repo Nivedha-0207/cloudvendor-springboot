@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud_vendor?useSSL=false
+    username: root
+    password: Nivedha_02
+
+  # JPA Settings
+  jpa:
+    hibernate:
+      ddl-auto: create  # Correct indentation and property name
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,metrics,beans"
+      base-path: "/management-dashboard"
+    endpoints:
+          health:
+            show-details: always
+
+
+
